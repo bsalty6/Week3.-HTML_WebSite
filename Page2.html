@@ -100,6 +100,17 @@
       margin-top: 6px;
       opacity: 0.9;
     }
+    .player-image.placeholder {
+      aspect-ratio: 4 / 3;
+      background-color: rgba(255,255,255,0.05);
+      border: 2px dashed #C6A960;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #C6A960;
+      font-family: 'Oswald', Arial, sans-serif;
+      font-size: 0.9rem;
+    }
     .page-nav {
       margin-top: 70px;
       text-align: center;
@@ -125,7 +136,29 @@
   <div class="header-row">
     <div class="stripe left"></div>
     <div class="heading-text">
-      <!-- Add more player rows here, same format as the homepage -->
+      <div class="player-row">
+        <img class="player-image" src="images/adrian_peterson.webp" alt="Adrian Peterson">
+        <div class="player-text">
+          <h3>Adrian Peterson</h3>
+          <p>Some say is a top 5 running back all time, AP is the greatest running back in Vikings history by a landslide. He is the last non QB to win an MVP and he carried the Vikings to the playoffs with no supporting cast. He was truly special to watch.</p>
+        </div>
+      </div>
+
+      <div class="player-row reverse">
+        <img class="player-image" src="images/randy_moss.jpeg" alt="Randy Moss">
+        <div class="player-text">
+          <h3>Randy Moss</h3>
+          <p>Randy Moss is one of the scariest wide receivers to ever play in the NFL. He is regarded as the 2nd best receiver all time. He holds the most receiving touchdowns in a single season by a rookie with 20 and also the most in a season with 23. He is the reason for the phrase "Get Mossed."</p>
+        </div>
+      </div>
+
+      <div class="player-row">
+        <img class="player-image" src="images/dallas_turner.jpeg" alt="Dallas Turner">
+        <div class="player-text">
+          <h3>Dallas Turner</h3>
+          <p>He is the new future face of the franchise that I have faith in. There isn't much to say about him yet, but he is going into his 3rd year and I believe that Dallas Turner will be one of the best pass rushers to ever wear the purple and yellow.</p>
+        </div>
+      </div>
 
       <div class="page-nav" style="margin-top: 60px;">
         <a href="index.html">&larr; Back to Page 1</a>
