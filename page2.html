@@ -48,6 +48,14 @@
       text-transform: uppercase;
       margin: 0 0 10px;
     }
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+    }
     h1 {
       font-family: 'Anton', Arial, sans-serif;
       color: #C6A960;
@@ -62,19 +70,25 @@
     }
     .rankings {
       max-width: 700px;
-      margin: 20px auto 0;
+      margin: 50px auto 0;
       color: #FFFFFF;
       font-family: 'Oswald', Arial, sans-serif;
-      text-align: left;
-    }
-    .rankings h3 {
-      font-family: 'Anton', Arial, sans-serif;
-      color: #C6A960;
       text-align: center;
-      letter-spacing: 0.5px;
+    }
+    .rankings h4 {
+      margin: 0 0 20px;
     }
     .rankings ol {
-      line-height: 1.8;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      list-style-position: inside;
+      padding: 0;
+      margin: 0;
+    }
+    .rankings ol li {
+      max-width: 220px;
     }
     .player-row {
       display: flex;
@@ -153,21 +167,21 @@
 
     <div class="heading-text">
 
-      <!-- HEADER: page title (kept smaller here since the big title already appears on page 1) -->
+      <!-- HEADER: page title (visually hidden here since the big title already appears on page 1, but kept in the code for accessibility/semantics) -->
       <header>
-        <p class="page-title-small">My Favorite Minnesota Vikings Players of All Time</p>
+        <h1 class="visually-hidden">My Favorite Minnesota Vikings Players of All Time — Page 2</h1>
       </header>
 
       <!-- MAIN: all page content lives here -->
       <main>
 
-        <!-- SECTION: ordered list showing the order players appear on this page -->
+        <!-- SECTION: ordered list of favorite moments -->
         <section class="rankings">
-          <h3>Featured On This Page</h3>
+          <h4><sub>My Favorite Moments</sub></h4>
           <ol>
-            <li>Adrian Peterson</li>
-            <li>Randy Moss</li>
-            <li>Dallas Turner</li>
+            <li>Minneapolis Miracle</li>
+            <li>33-point comeback against the Colts</li>
+            <li>Jefferson's catch against the Bills</li>
           </ol>
         </section>
 

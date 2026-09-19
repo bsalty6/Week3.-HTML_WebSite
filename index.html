@@ -55,18 +55,27 @@
     .criteria {
       max-width: 700px;
       margin: 50px auto 0;
-      color: #FFFFFF;
-      font-family: 'Oswald', Arial, sans-serif;
-      text-align: left;
-    }
-    .criteria h3 {
-      font-family: 'Anton', Arial, sans-serif;
-      color: #C6A960;
       text-align: center;
-      letter-spacing: 0.5px;
     }
-    .criteria ul {
-      line-height: 1.8;
+    .criteria h4 {
+      margin: 0 0 20px;
+    }
+    .jersey-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin: 0;
+      padding: 0;
+    }
+    .jersey-list img {
+      width: 150px;
+      height: auto;
+      border: 2px solid #C6A960;
+      border-radius: 6px;
+      background-color: #FFFFFF;
     }
     .player-row {
       display: flex;
@@ -145,24 +154,22 @@
 
     <div class="heading-text">
 
-      <!-- HEADER: page title and byline -->
+      <!-- HEADER: page title -->
       <header>
         <h1>My Favorite Minnesota Vikings</h1>
         <h1>Players of All Time</h1>
-        <h4><sub>By Brady Salter-Kickbush</sub></h4>
       </header>
 
       <!-- MAIN: all page content lives here -->
       <main>
 
-        <!-- SECTION: unordered list explaining how players were chosen -->
+        <!-- SECTION: unordered list of favorite jerseys, shown as images -->
         <section class="criteria">
-          <h3>How I Picked These Players</h3>
-          <ul>
-            <li>Career stats and on-field impact</li>
-            <li>Longevity and consistency with the Vikings</li>
-            <li>Awards, accolades, and league-wide recognition</li>
-            <li>Personal favorites and moments that stuck with me</li>
+          <h4><sub>My Favorite Jerseys</sub></h4>
+          <ul class="jersey-list">
+            <li><img src="images/moss_jersey.jpeg" alt="Randy Moss jersey" width="150"></li>
+            <li><img src="images/turner_jersey.jpeg" alt="Dallas Turner jersey" width="150"></li>
+            <li><img src="images/whiteout_jersey.avif" alt="Vikings white-out jersey" width="150"></li>
           </ul>
         </section>
 
