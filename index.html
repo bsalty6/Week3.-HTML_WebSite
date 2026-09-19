@@ -52,6 +52,22 @@
       font-weight: 400;
       margin: 8px 0 0;
     }
+    .criteria {
+      max-width: 700px;
+      margin: 50px auto 0;
+      color: #FFFFFF;
+      font-family: 'Oswald', Arial, sans-serif;
+      text-align: left;
+    }
+    .criteria h3 {
+      font-family: 'Anton', Arial, sans-serif;
+      color: #C6A960;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .criteria ul {
+      line-height: 1.8;
+    }
     .player-row {
       display: flex;
       align-items: center;
@@ -123,36 +139,70 @@
 </head>
 <body>
   <div class="header-row">
+
+    <!-- Decorative gold/white braided stripe, repeats down the full page height -->
     <div class="stripe left"></div>
+
     <div class="heading-text">
-      <h1>My Favorite Minnesota Vikings</h1>
-      <h1>Players of All Time</h1>
-      <h4><sub>By Brady Salter-Kickbush</sub></h4>
 
-      <div class="player-row">
-        <img class="player-image" src="images/Justin Jefferson.jpeg" alt="Justin Jefferson">
-        <div class="player-text">
-          <h3>Justin Jefferson</h3>
-          <p>The 28-year-old receiver was drafted in 2020 and has quickly become the current BEST wide receiver in the league. He is the quickest to hit 8,500 yards in his career and is on pace to be the first to 10,000. He is my all-time favorite player and is the reason I fell in love with football.</p>
-          <p class="player-stats">587 REC &nbsp;|&nbsp; 8,572 YDS &nbsp;|&nbsp; 44 TD</p>
-          <p class="player-accolades">4x Pro Bowl &nbsp;|&nbsp; 2x First-Team All-Pro &nbsp;|&nbsp; 2022 OPOY</p>
-        </div>
-      </div>
+      <!-- HEADER: page title and byline -->
+      <header>
+        <h1>My Favorite Minnesota Vikings</h1>
+        <h1>Players of All Time</h1>
+        <h4><sub>By Brady Salter-Kickbush</sub></h4>
+      </header>
 
-      <div class="player-row reverse">
-        <img class="player-image" src="images/Harrison Smith.jpeg" alt="Harrison Smith">
-        <div class="player-text">
-          <h3>Harrison Smith</h3>
-          <p>His nickname is "Hit Man," and he plays safety. He is still active after being drafted in 2012. He has played for the Minnesota Vikings his whole career and has been a cornerstone of their defense. He is undoubtedly (in my opinion) in conversation to be one of the best safeties in NFL history, easily top 5.</p>
-          <p class="player-stats">1,182 TKL &nbsp;|&nbsp; 39 INT &nbsp;|&nbsp; 21.5 SCK &nbsp;|&nbsp; 13 FF &nbsp;|&nbsp; 108 PD</p>
-          <p class="player-accolades">6x Pro Bowl &nbsp;|&nbsp; 1x First-Team All-Pro</p>
-        </div>
-      </div>
+      <!-- MAIN: all page content lives here -->
+      <main>
 
-      <div class="page-nav">
-        <a href="Page2.html">Next Page &rarr;</a>
-      </div>
+        <!-- SECTION: unordered list explaining how players were chosen -->
+        <section class="criteria">
+          <h3>How I Picked These Players</h3>
+          <ul>
+            <li>Career stats and on-field impact</li>
+            <li>Longevity and consistency with the Vikings</li>
+            <li>Awards, accolades, and league-wide recognition</li>
+            <li>Personal favorites and moments that stuck with me</li>
+          </ul>
+        </section>
+
+        <!-- SECTION: individual player profiles (image + bio for each player) -->
+        <section class="players">
+
+          <!-- Player 1: Justin Jefferson -->
+          <div class="player-row">
+            <img class="player-image" src="images/Justin Jefferson.jpeg" alt="Justin Jefferson" width="400">
+            <div class="player-text">
+              <h3>Justin Jefferson</h3>
+              <p>The 28-year-old receiver was drafted in 2020 and has quickly become the current BEST wide receiver in the league. He is the quickest to hit 8,500 yards in his career and is on pace to be the first to 10,000. He is my all-time favorite player and is the reason I fell in love with football.</p>
+              <p class="player-stats">587 REC &nbsp;|&nbsp; 8,572 YDS &nbsp;|&nbsp; 44 TD</p>
+              <p class="player-accolades">4x Pro Bowl &nbsp;|&nbsp; 2x First-Team All-Pro &nbsp;|&nbsp; 2022 OPOY</p>
+            </div>
+          </div>
+
+          <!-- Player 2: Harrison Smith -->
+          <div class="player-row reverse">
+            <img class="player-image" src="images/Harrison Smith.jpeg" alt="Harrison Smith" width="400">
+            <div class="player-text">
+              <h3>Harrison Smith</h3>
+              <p>His nickname is "Hit Man," and he plays safety. He is still active after being drafted in 2012. He has played for the Minnesota Vikings his whole career and has been a cornerstone of their defense. He is undoubtedly (in my opinion) in conversation to be one of the best safeties in NFL history, easily top 5.</p>
+              <p class="player-stats">1,182 TKL &nbsp;|&nbsp; 39 INT &nbsp;|&nbsp; 21.5 SCK &nbsp;|&nbsp; 13 FF &nbsp;|&nbsp; 108 PD</p>
+              <p class="player-accolades">6x Pro Bowl &nbsp;|&nbsp; 1x First-Team All-Pro</p>
+            </div>
+          </div>
+
+        </section>
+
+      </main>
+
+      <!-- FOOTER: internal link to the second page -->
+      <footer class="page-nav">
+        <a href="page2.html">Next Page &rarr;</a>
+      </footer>
+
     </div>
+
+    <!-- Decorative gold/white braided stripe, mirrors the left one -->
     <div class="stripe right"></div>
   </div>
 </body>

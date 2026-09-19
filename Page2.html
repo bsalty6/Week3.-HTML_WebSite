@@ -40,6 +40,14 @@
       padding-top: 60px;
       padding-bottom: 80px;
     }
+    .page-title-small {
+      font-family: 'Oswald', Arial, sans-serif;
+      color: #C6A960;
+      font-size: 1.1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+    }
     h1 {
       font-family: 'Anton', Arial, sans-serif;
       color: #C6A960;
@@ -51,6 +59,22 @@
       color: #FFFFFF;
       font-weight: 400;
       margin: 8px 0 0;
+    }
+    .rankings {
+      max-width: 700px;
+      margin: 20px auto 0;
+      color: #FFFFFF;
+      font-family: 'Oswald', Arial, sans-serif;
+      text-align: left;
+    }
+    .rankings h3 {
+      font-family: 'Anton', Arial, sans-serif;
+      color: #C6A960;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .rankings ol {
+      line-height: 1.8;
     }
     .player-row {
       display: flex;
@@ -100,17 +124,6 @@
       margin-top: 6px;
       opacity: 0.9;
     }
-    .player-image.placeholder {
-      aspect-ratio: 4 / 3;
-      background-color: rgba(255,255,255,0.05);
-      border: 2px dashed #C6A960;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #C6A960;
-      font-family: 'Oswald', Arial, sans-serif;
-      font-size: 0.9rem;
-    }
     .page-nav {
       margin-top: 70px;
       text-align: center;
@@ -134,43 +147,78 @@
 </head>
 <body>
   <div class="header-row">
+
+    <!-- Decorative gold/white braided stripe, repeats down the full page height -->
     <div class="stripe left"></div>
+
     <div class="heading-text">
-      <div class="player-row">
-        <img class="player-image" src="images/AP.webp" alt="Adrian Peterson">
-        <div class="player-text">
-          <h3>Adrian Peterson</h3>
-          <p>Some say he is a top-5 running back of all time; AP is the greatest running back in Vikings history by a landslide. He is the last non-QB to win an MVP, and he carried the Vikings to the playoffs with no supporting cast. He was truly special to watch.</p>
-          <p class="player-stats">14,918 RUSH YDS &nbsp;|&nbsp; 120 RUSH TD &nbsp;|&nbsp; 2,474 REC YDS &nbsp;|&nbsp; 6 REC TD</p>
-          <p class="player-accolades">2007 ROTY &nbsp;|&nbsp; 2012 OPOY &nbsp;|&nbsp; 2012 MVP &nbsp;|&nbsp; 7x Pro Bowl</p>
-        </div>
-      </div>
 
-      <div class="player-row reverse">
-        <img class="player-image" src="images/RandyMoss.jpeg" alt="Randy Moss">
-        <div class="player-text">
-          <h3>Randy Moss</h3>
-          <p>Randy Moss is one of the scariest wide receivers to ever play in the NFL. He is regarded as the 2nd-best receiver of all time. He holds the record for the most receiving touchdowns in a single season by a rookie with 20, and also the most in a season with 23. He is the reason for the phrase "Get Mossed."</p>
-          <p class="player-stats">982 REC &nbsp;|&nbsp; 15,292 YDS &nbsp;|&nbsp; 156 TD</p>
-          <p class="player-accolades">1998 ROTY &nbsp;|&nbsp; 6x Pro Bowl &nbsp;|&nbsp; 4x All-Pro</p>
-        </div>
-      </div>
+      <!-- HEADER: page title (kept smaller here since the big title already appears on page 1) -->
+      <header>
+        <p class="page-title-small">My Favorite Minnesota Vikings Players of All Time</p>
+      </header>
 
-      <div class="player-row">
-        <img class="player-image" src="images/Dallas Turner.jpeg" alt="Dallas Turner">
-        <div class="player-text">
-          <h3>Dallas Turner</h3>
-          <p>He is the future face of the franchise that I have faith in. There isn't much to say about him yet, but he is going into his 3rd year, and I believe that Dallas Turner will be one of the best pass rushers to ever wear the purple and yellow.</p>
-          <p class="player-stats">12 SCK &nbsp;|&nbsp; 5 FF &nbsp;|&nbsp; 88 TKL &nbsp;|&nbsp; 1 INT</p>
-        </div>
-      </div>
+      <!-- MAIN: all page content lives here -->
+      <main>
 
-      <div class="page-nav" style="margin-top: 60px;">
+        <!-- SECTION: ordered list showing the order players appear on this page -->
+        <section class="rankings">
+          <h3>Featured On This Page</h3>
+          <ol>
+            <li>Adrian Peterson</li>
+            <li>Randy Moss</li>
+            <li>Dallas Turner</li>
+          </ol>
+        </section>
+
+        <!-- SECTION: individual player profiles (image + bio for each player) -->
+        <section class="players">
+
+          <!-- Player 1: Adrian Peterson -->
+          <div class="player-row">
+            <img class="player-image" src="images/AP.webp" alt="Adrian Peterson" width="400">
+            <div class="player-text">
+              <h3>Adrian Peterson</h3>
+              <p>Some say he is a top-5 running back of all time; AP is the greatest running back in Vikings history by a landslide. He is the last non-QB to win an MVP, and he carried the Vikings to the playoffs with no supporting cast. He was truly special to watch.</p>
+              <p class="player-stats">14,918 RUSH YDS &nbsp;|&nbsp; 120 RUSH TD &nbsp;|&nbsp; 2,474 REC YDS &nbsp;|&nbsp; 6 REC TD</p>
+              <p class="player-accolades">2007 ROTY &nbsp;|&nbsp; 2012 OPOY &nbsp;|&nbsp; 2012 MVP &nbsp;|&nbsp; 7x Pro Bowl</p>
+            </div>
+          </div>
+
+          <!-- Player 2: Randy Moss -->
+          <div class="player-row reverse">
+            <img class="player-image" src="images/RandyMoss.jpeg" alt="Randy Moss" width="400">
+            <div class="player-text">
+              <h3>Randy Moss</h3>
+              <p>Randy Moss is one of the scariest wide receivers to ever play in the NFL. He is regarded as the 2nd-best receiver of all time. He holds the record for the most receiving touchdowns in a single season by a rookie with 20, and also the most in a season with 23. He is the reason for the phrase "Get Mossed."</p>
+              <p class="player-stats">982 REC &nbsp;|&nbsp; 15,292 YDS &nbsp;|&nbsp; 156 TD</p>
+              <p class="player-accolades">1998 ROTY &nbsp;|&nbsp; 6x Pro Bowl &nbsp;|&nbsp; 4x All-Pro</p>
+            </div>
+          </div>
+
+          <!-- Player 3: Dallas Turner -->
+          <div class="player-row">
+            <img class="player-image" src="images/Dallas Turner.jpeg" alt="Dallas Turner" width="400">
+            <div class="player-text">
+              <h3>Dallas Turner</h3>
+              <p>He is the future face of the franchise that I have faith in. There isn't much to say about him yet, but he is going into his 3rd year, and I believe that Dallas Turner will be one of the best pass rushers to ever wear the purple and yellow.</p>
+              <p class="player-stats">12 SCK &nbsp;|&nbsp; 5 FF &nbsp;|&nbsp; 88 TKL &nbsp;|&nbsp; 1 INT</p>
+            </div>
+          </div>
+
+        </section>
+
+      </main>
+
+      <!-- FOOTER: internal link back to the home page -->
+      <footer class="page-nav">
         <a href="index.html">&larr; Back to Page 1</a>
-      </div>
+      </footer>
+
     </div>
+
+    <!-- Decorative gold/white braided stripe, mirrors the left one -->
     <div class="stripe right"></div>
   </div>
 </body>
 </html>
-
