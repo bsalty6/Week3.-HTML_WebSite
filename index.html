@@ -6,145 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
-    body {
-      background-color: #301462;
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    .header-row {
-      display: flex;
-      align-items: stretch;
-      justify-content: center;
-      gap: 60px;
-      min-height: 100vh;
-      width: 100%;
-      box-sizing: border-box;
-      padding: 0 40px;
-    }
-    .stripe {
-      width: 100px;
-      flex-shrink: 0;
-      background-image: url('images/stripe.jpg');
-      background-repeat: repeat-y;
-      background-size: 100px auto;
-      background-position: top center;
-    }
-    .heading-text {
-      flex: 1;
-      max-width: 1000px;
-      padding-top: 60px;
-      padding-bottom: 80px;
-    }
-    h1 {
-      font-family: 'Anton', Arial, sans-serif;
-      color: #C6A960;
-      margin: 4px 0;
-      letter-spacing: 1px;
-    }
-    h4 {
-      font-family: 'Oswald', Arial, sans-serif;
-      color: #FFFFFF;
-      font-weight: 400;
-      margin: 8px 0 0;
-    }
-    .criteria {
-      max-width: 700px;
-      margin: 50px auto 0;
-      text-align: center;
-    }
-    .criteria h4 {
-      margin: 0 0 20px;
-    }
-    .jersey-list {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 24px;
-      flex-wrap: wrap;
-      margin: 0;
-      padding: 0;
-    }
-    .jersey-list img {
-      width: 150px;
-      height: auto;
-      border: 2px solid #C6A960;
-      border-radius: 6px;
-      background-color: #FFFFFF;
-    }
-    .player-row {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      max-width: 900px;
-      margin: 60px auto 0;
-      text-align: left;
-    }
-    .player-row.reverse {
-      flex-direction: row-reverse;
-    }
-    .player-image {
-      flex: 1;
-      width: 100%;
-      height: auto;
-      display: block;
-      border: 2px solid #C6A960;
-      border-radius: 6px;
-    }
-    .player-text {
-      flex: 1;
-      color: #FFFFFF;
-      font-family: 'Oswald', Arial, sans-serif;
-      font-size: 1rem;
-      line-height: 1.5;
-      text-align: center;
-    }
-    .player-text h3 {
-      font-family: 'Anton', Arial, sans-serif;
-      color: #C6A960;
-      letter-spacing: 0.5px;
-      margin: 0 0 8px;
-    }
-    .player-stats {
-      font-family: 'Anton', Arial, sans-serif;
-      color: #C6A960;
-      letter-spacing: 1px;
-      font-size: 0.95rem;
-      margin-top: 16px;
-    }
-    .player-accolades {
-      font-family: 'Oswald', Arial, sans-serif;
-      color: #C6A960;
-      font-style: italic;
-      font-size: 0.85rem;
-      margin-top: 6px;
-      opacity: 0.9;
-    }
-    .page-nav {
-      margin-top: 70px;
-      text-align: center;
-    }
-    .page-nav a {
-      display: inline-block;
-      color: #C6A960;
-      font-family: 'Oswald', Arial, sans-serif;
-      text-decoration: none;
-      border: 2px solid #C6A960;
-      padding: 10px 28px;
-      border-radius: 4px;
-      letter-spacing: 1px;
-      transition: background-color 0.2s, color 0.2s;
-    }
-    .page-nav a:hover {
-      background-color: #C6A960;
-      color: #301462;
-    }
-  </style>
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
   <div class="header-row">
@@ -164,7 +26,7 @@
       <main>
 
         <!-- SECTION: unordered list of favorite jerseys, shown as images -->
-        <section class="criteria">
+        <section class="criteria" id="jersey-picks">
           <h4><sub>My Favorite Jerseys</sub></h4>
           <ul class="jersey-list">
             <li><img src="images/MV Classic Jersey.jpeg" alt="Randy Moss jersey" width="150"></li>
@@ -174,7 +36,7 @@
         </section>
 
         <!-- SECTION: individual player profiles (image + bio for each player) -->
-        <section class="players">
+        <section class="players" id="player-profiles">
 
           <!-- Player 1: Justin Jefferson -->
           <div class="player-row">

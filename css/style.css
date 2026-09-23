@@ -1,0 +1,224 @@
+/* ===== Base page setup ===== */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #301462;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* ===== Header row: left stripe / heading / right stripe ===== */
+.header-row {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 60px;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+}
+
+.stripe {
+  width: 100px;
+  flex-shrink: 0;
+  background-image: url('../images/stripe.jpg');
+  background-repeat: repeat-y;
+  background-size: 100px auto;
+  background-position: top center;
+}
+
+.heading-text {
+  flex: 1;
+  max-width: 1000px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+/* ===== Headings ===== */
+h1 {
+  font-family: 'Anton', Arial, sans-serif;
+  color: #C6A960;
+  margin: 4px 0;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-family: 'Oswald', Arial, sans-serif;
+  color: #FFFFFF;
+  font-weight: 400;
+  margin: 8px 0 0;
+}
+
+/* ===== Page 2 only: small uppercase label + visually-hidden heading ===== */
+.page-title-small {
+  font-family: 'Oswald', Arial, sans-serif;
+  color: #C6A960;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* ===== Page 2 only: favorite moments ranked list ===== */
+.rankings {
+  max-width: 700px;
+  margin: 50px auto 0;
+  color: #FFFFFF;
+  font-family: 'Oswald', Arial, sans-serif;
+  text-align: center;
+}
+
+.rankings h4 {
+  margin: 0 0 20px;
+}
+
+.rankings ol {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+}
+
+.rankings ol li {
+  max-width: 220px;
+}
+
+/* ===== ID example: favorite moments section (page 2) — demonstrates ID selector without changing the existing look ===== */
+#favorite-moments {
+  box-sizing: border-box;
+}
+
+/* ===== Jersey picks section ===== */
+.criteria {
+  max-width: 700px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+.criteria h4 {
+  margin: 0 0 20px;
+}
+
+.jersey-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.jersey-list img {
+  width: 150px;
+  height: auto;
+  border: 2px solid #C6A960;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+}
+
+/* ===== ID example: jersey section — demonstrates ID selector without changing the existing look ===== */
+#jersey-picks {
+  box-sizing: border-box;
+}
+
+/* ===== Player profile rows ===== */
+.player-row {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 60px auto 0;
+  text-align: left;
+}
+
+.player-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.player-image {
+  flex: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid #C6A960;
+  border-radius: 6px;
+}
+
+.player-text {
+  flex: 1;
+  color: #FFFFFF;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.player-text h3 {
+  font-family: 'Anton', Arial, sans-serif;
+  color: #C6A960;
+  letter-spacing: 0.5px;
+  margin: 0 0 8px;
+}
+
+.player-stats {
+  font-family: 'Anton', Arial, sans-serif;
+  color: #C6A960;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+  margin-top: 16px;
+}
+
+.player-accolades {
+  font-family: 'Oswald', Arial, sans-serif;
+  color: #C6A960;
+  font-style: italic;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  opacity: 0.9;
+}
+
+/* ===== ID example: player section — demonstrates ID selector without changing the existing look ===== */
+#player-profiles {
+  box-sizing: border-box;
+}
+
+/* ===== Page navigation footer ===== */
+.page-nav {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.page-nav a {
+  display: inline-block;
+  color: #C6A960;
+  font-family: 'Oswald', Arial, sans-serif;
+  text-decoration: none;
+  border: 2px solid #C6A960;
+  padding: 10px 28px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.page-nav a:hover {
+  background-color: #C6A960;
+  color: #301462;
+}
