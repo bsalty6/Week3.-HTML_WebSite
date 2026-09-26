@@ -99,9 +99,10 @@ h4 {
   max-width: 220px;
 }
 
-/* ===== ID example: favorite moments section (page 2) — demonstrates ID selector without changing the existing look ===== */
+/* ===== ID example: favorite moments section (page 2) — thin gold divider above the section ===== */
 #favorite-moments {
-  box-sizing: border-box;
+  border-top: 2px solid rgba(198, 169, 96, 0.35);
+  padding-top: 24px;
 }
 
 /* ===== Jersey picks section ===== */
@@ -134,9 +135,10 @@ h4 {
   background-color: #FFFFFF;
 }
 
-/* ===== ID example: jersey section — demonstrates ID selector without changing the existing look ===== */
+/* ===== ID example: jersey section — thin gold divider above the section ===== */
 #jersey-picks {
-  box-sizing: border-box;
+  border-top: 2px solid rgba(198, 169, 96, 0.35);
+  padding-top: 24px;
 }
 
 /* ===== Player profile rows ===== */
@@ -195,9 +197,10 @@ h4 {
   opacity: 0.9;
 }
 
-/* ===== ID example: player section — demonstrates ID selector without changing the existing look ===== */
+/* ===== ID example: player section — thin gold divider above the section ===== */
 #player-profiles {
-  box-sizing: border-box;
+  border-top: 2px solid rgba(198, 169, 96, 0.35);
+  padding-top: 24px;
 }
 
 /* ===== Page navigation footer ===== */
