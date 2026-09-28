@@ -160,7 +160,8 @@ h2 {
 }
 
 .player-image {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   width: 100%;
   height: auto;
   display: block;
@@ -169,7 +170,8 @@ h2 {
 }
 
 .player-text {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   color: #FFFFFF;
   font-family: 'Oswald', Arial, sans-serif;
   font-size: 1rem;
