@@ -46,10 +46,11 @@ h1 {
   letter-spacing: 1px;
 }
 
-h4 {
+h2 {
   font-family: 'Oswald', Arial, sans-serif;
   color: #FFFFFF;
   font-weight: 400;
+  font-size: 1.3rem;
   margin: 8px 0 0;
 }
 
@@ -67,6 +68,9 @@ h4 {
   position: absolute;
   width: 1px;
   height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
@@ -81,7 +85,7 @@ h4 {
   text-align: center;
 }
 
-.rankings h4 {
+.rankings h2 {
   margin: 0 0 20px;
 }
 
@@ -112,7 +116,7 @@ h4 {
   text-align: center;
 }
 
-.criteria h4 {
+.criteria h2 {
   margin: 0 0 20px;
 }
 
@@ -224,4 +228,12 @@ h4 {
 .page-nav a:hover {
   background-color: #C6A960;
   color: #301462;
+}
+
+/* Keyboard focus style (for people navigating with Tab) */
+.page-nav a:focus-visible {
+  background-color: #C6A960;
+  color: #301462;
+  outline: 3px solid #FFFFFF;
+  outline-offset: 3px;
 }

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Greatest Minnesota Vikings Players of All Time</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,15 +12,14 @@
 <body>
   <div class="header-row">
 
-    <!-- Decorative gold/white braided stripe, repeats down the full page height -->
-    <div class="stripe left"></div>
+    <!-- Decorative gold/white braided stripe, repeats down the full page height (hidden from screen readers) -->
+    <div class="stripe left" aria-hidden="true"></div>
 
     <div class="heading-text">
 
-      <!-- HEADER: page title -->
+      <!-- HEADER: page title (only one h1 per page) -->
       <header>
-        <h1>My Favorite Minnesota Vikings</h1>
-        <h1>Players of All Time</h1>
+        <h1>My Favorite Minnesota Vikings<br>Players of All Time</h1>
       </header>
 
       <!-- MAIN: all page content lives here -->
@@ -27,20 +27,21 @@
 
         <!-- SECTION: unordered list of favorite jerseys, shown as images -->
         <section class="criteria" id="jersey-picks">
-          <h4><sub>My Favorite Jerseys</sub></h4>
+          <h2>My Favorite Jerseys</h2>
           <ul class="jersey-list">
-            <li><img src="images/MV Classic Jersey.jpeg" alt="Randy Moss jersey" width="150"></li>
-            <li><img src="images/MV Rivalry Jersey.jpeg" alt="Dallas Turner jersey" width="150"></li>
+            <li><img src="images/MV Classic Jersey.jpeg" alt="Randy Moss classic Vikings jersey" width="150"></li>
+            <li><img src="images/MV Rivalry Jersey.jpeg" alt="Dallas Turner rivalry Vikings jersey" width="150"></li>
             <li><img src="images/MV WhiteOut Jersey.avif" alt="Vikings white-out jersey" width="150"></li>
           </ul>
         </section>
 
         <!-- SECTION: individual player profiles (image + bio for each player) -->
         <section class="players" id="player-profiles">
+          <h2>My Favorite Players</h2>
 
           <!-- Player 1: Justin Jefferson -->
           <div class="player-row">
-            <img class="player-image" src="images/Justin Jefferson.jpeg" alt="Justin Jefferson" width="400">
+            <img class="player-image" src="images/Justin Jefferson.jpeg" alt="Justin Jefferson wearing a Minnesota Vikings uniform" width="400">
             <div class="player-text">
               <h3>Justin Jefferson</h3>
               <p>The 28-year-old receiver was drafted in 2020 and has quickly become the current BEST wide receiver in the league. He is the quickest to hit 8,500 yards in his career and is on pace to be the first to 10,000. He is my all-time favorite player and is the reason I fell in love with football.</p>
@@ -51,7 +52,7 @@
 
           <!-- Player 2: Harrison Smith -->
           <div class="player-row reverse">
-            <img class="player-image" src="images/Harrison Smith.jpeg" alt="Harrison Smith" width="400">
+            <img class="player-image" src="images/Harrison Smith.jpeg" alt="Harrison Smith wearing a Minnesota Vikings uniform" width="400">
             <div class="player-text">
               <h3>Harrison Smith</h3>
               <p>His nickname is "Hit Man," and he plays safety. He is still active after being drafted in 2012. He has played for the Minnesota Vikings his whole career and has been a cornerstone of their defense. He is undoubtedly (in my opinion) in conversation to be one of the best safeties in NFL history, easily top 5.</p>
@@ -66,13 +67,15 @@
 
       <!-- FOOTER: internal link to the second page -->
       <footer class="page-nav">
-        <a href="page2.html">Next Page &rarr;</a>
+        <nav aria-label="Page navigation">
+          <a href="page2.html">Next: My favorite moments and more players &rarr;</a>
+        </nav>
       </footer>
 
     </div>
 
-    <!-- Decorative gold/white braided stripe, mirrors the left one -->
-    <div class="stripe right"></div>
+    <!-- Decorative gold/white braided stripe, mirrors the left one (hidden from screen readers) -->
+    <div class="stripe right" aria-hidden="true"></div>
   </div>
 </body>
 </html>
