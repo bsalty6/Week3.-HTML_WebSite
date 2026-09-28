@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Favorite Minnesota Vikings Players of All Time</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Favorite Minnesota Vikings Moments and More Players</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
@@ -11,14 +12,14 @@
 <body>
   <div class="header-row">
 
-    <!-- Decorative gold/white braided stripe, repeats down the full page height -->
-    <div class="stripe left"></div>
+    <!-- Decorative gold/white braided stripe, repeats down the full page height (hidden from screen readers) -->
+    <div class="stripe left" aria-hidden="true"></div>
 
     <div class="heading-text">
 
       <!-- HEADER: page title (visually hidden here since the big title already appears on page 1, but kept in the code for accessibility/semantics) -->
       <header>
-        <h1 class="visually-hidden">My Favorite Minnesota Vikings Players of All Time — Page 2</h1>
+        <h1 class="visually-hidden">My Favorite Minnesota Vikings Moments and More Players</h1>
       </header>
 
       <!-- MAIN: all page content lives here -->
@@ -26,7 +27,7 @@
 
         <!-- SECTION: ordered list of favorite moments -->
         <section class="rankings" id="favorite-moments">
-          <h4><sub>My Favorite Moments</sub></h4>
+          <h2>My Favorite Moments</h2>
           <ol>
             <li>Minneapolis Miracle</li>
             <li>33-point comeback against the Colts</li>
@@ -36,10 +37,11 @@
 
         <!-- SECTION: individual player profiles (image + bio for each player) -->
         <section class="players" id="player-profiles">
+          <h2>More Favorite Players</h2>
 
           <!-- Player 1: Adrian Peterson -->
           <div class="player-row">
-            <img class="player-image" src="images/AP.webp" alt="Adrian Peterson" width="400">
+            <img class="player-image" src="images/AP.webp" alt="Adrian Peterson running with ball" width="400">
             <div class="player-text">
               <h3>Adrian Peterson</h3>
               <p>Some say he is a top-5 running back of all time; AP is the greatest running back in Vikings history by a landslide. He is the last non-QB to win an MVP, and he carried the Vikings to the playoffs with no supporting cast. He was truly special to watch.</p>
@@ -50,7 +52,7 @@
 
           <!-- Player 2: Randy Moss -->
           <div class="player-row reverse">
-            <img class="player-image" src="images/RandyMoss.jpeg" alt="Randy Moss" width="400">
+            <img class="player-image" src="images/RandyMoss.jpeg" alt="Randy Moss giving a thumbs up" width="400">
             <div class="player-text">
               <h3>Randy Moss</h3>
               <p>Randy Moss is one of the scariest wide receivers to ever play in the NFL. He is regarded as the 2nd-best receiver of all time. He holds the record for the most receiving touchdowns in a single season by a rookie with 20, and also the most in a season with 23. He is the reason for the phrase "Get Mossed."</p>
@@ -61,7 +63,7 @@
 
           <!-- Player 3: Dallas Turner -->
           <div class="player-row">
-            <img class="player-image" src="images/Dallas Turner.jpeg" alt="Dallas Turner" width="400">
+            <img class="player-image" src="images/Dallas Turner.jpeg" alt="Dallas Turner after sack" width="400">
             <div class="player-text">
               <h3>Dallas Turner</h3>
               <p>He is the future face of the franchise that I have faith in. There isn't much to say about him yet, but he is going into his 3rd year, and I believe that Dallas Turner will be one of the best pass rushers to ever wear the purple and yellow.</p>
@@ -75,13 +77,15 @@
 
       <!-- FOOTER: internal link back to the home page -->
       <footer class="page-nav">
-        <a href="index.html">&larr; Back to Page 1</a>
+        <nav aria-label="Page navigation">
+          <a href="index.html">&larr; Back to my favorite jerseys and players</a>
+        </nav>
       </footer>
 
     </div>
 
-    <!-- Decorative gold/white braided stripe, mirrors the left one -->
-    <div class="stripe right"></div>
+    <!-- Decorative gold/white braided stripe, mirrors the left one (hidden from screen readers) -->
+    <div class="stripe right" aria-hidden="true"></div>
   </div>
 </body>
 </html>
