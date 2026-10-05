@@ -7,85 +7,101 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS: must come BEFORE style.css so my custom styles can override it -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-  <div class="header-row">
+  <!-- Bootstrap grid: stripe | content | stripe. min-vh-100 makes the stripes run the full page height -->
+  <div class="container-fluid px-2 px-md-4">
+    <div class="row min-vh-100 justify-content-center g-2 g-md-5">
 
-    <!-- Decorative gold/white braided stripe, repeats down the full page height (hidden from screen readers) -->
-    <div class="stripe left" aria-hidden="true"></div>
+      <!-- Decorative left stripe (hidden from screen readers) -->
+      <div class="col-auto d-flex">
+        <div class="stripe" aria-hidden="true"></div>
+      </div>
 
-    <div class="heading-text">
+      <div class="col heading-text text-center py-5">
 
-      <!-- HEADER: page title (visually hidden here since the big title already appears on page 1, but kept in the code for accessibility/semantics) -->
-      <header>
-        <h1 class="visually-hidden">My Favorite Minnesota Vikings Moments and More Players</h1>
-      </header>
+        <!-- HEADER: page title (visually hidden, but kept for accessibility/semantics) -->
+        <header>
+          <h1 class="visually-hidden">My Favorite Minnesota Vikings Moments and More Players</h1>
+        </header>
 
-      <!-- MAIN: all page content lives here -->
-      <main>
+        <!-- MAIN: all page content lives here -->
+        <main>
 
-        <!-- SECTION: ordered list of favorite moments -->
-        <section class="rankings" id="favorite-moments">
-          <h2>My Favorite Moments</h2>
-          <ol>
-            <li>Minneapolis Miracle</li>
-            <li>33-point comeback against the Colts</li>
-            <li>Jefferson's catch against the Bills</li>
-          </ol>
-        </section>
+          <!-- SECTION: ordered list of favorite moments (Bootstrap flex utilities replace the old custom flexbox) -->
+          <section class="rankings mt-5 mx-auto" id="favorite-moments">
+            <h2 class="mb-4">My Favorite Moments</h2>
+            <ol class="d-flex flex-column flex-md-row flex-wrap justify-content-center align-items-center gap-3 gap-md-4 p-0 m-0">
+              <li>Minneapolis Miracle</li>
+              <li>33-point comeback against the Colts</li>
+              <li>Jefferson's catch against the Bills</li>
+            </ol>
+          </section>
 
-        <!-- SECTION: individual player profiles (image + bio for each player) -->
-        <section class="players" id="player-profiles">
-          <h2>More Favorite Players</h2>
+          <!-- SECTION: player profiles. Each row is a 2-column Bootstrap grid that stacks on small screens -->
+          <section class="players mt-5" id="player-profiles">
+            <h2 class="mb-2">More Favorite Players</h2>
 
-          <!-- Player 1: Adrian Peterson -->
-          <div class="player-row">
-            <img class="player-image" src="images/AP.webp" alt="Adrian Peterson running with ball" width="400">
-            <div class="player-text">
-              <h3>Adrian Peterson</h3>
-              <p>Some say he is a top-5 running back of all time; AP is the greatest running back in Vikings history by a landslide. He is the last non-QB to win an MVP, and he carried the Vikings to the playoffs with no supporting cast. He was truly special to watch.</p>
-              <p class="player-stats">14,918 RUSH YDS &nbsp;|&nbsp; 120 RUSH TD &nbsp;|&nbsp; 2,474 REC YDS &nbsp;|&nbsp; 6 REC TD</p>
-              <p class="player-accolades">2007 ROTY &nbsp;|&nbsp; 2012 OPOY &nbsp;|&nbsp; 2012 MVP &nbsp;|&nbsp; 7x Pro Bowl</p>
+            <!-- Player 1: Adrian Peterson -->
+            <div class="player-row row align-items-center g-4 mx-auto mt-4">
+              <div class="col-md-6">
+                <img class="player-image img-fluid d-block" src="images/AP.webp" alt="Adrian Peterson running with ball" width="400">
+              </div>
+              <div class="col-md-6 player-text">
+                <h3>Adrian Peterson</h3>
+                <p>Some say he is a top-5 running back of all time; AP is the greatest running back in Vikings history by a landslide. He is the last non-QB to win an MVP, and he carried the Vikings to the playoffs with no supporting cast. He was truly special to watch.</p>
+                <p class="player-stats">14,918 RUSH YDS &nbsp;|&nbsp; 120 RUSH TD &nbsp;|&nbsp; 2,474 REC YDS &nbsp;|&nbsp; 6 REC TD</p>
+                <p class="player-accolades">2007 ROTY &nbsp;|&nbsp; 2012 OPOY &nbsp;|&nbsp; 2012 MVP &nbsp;|&nbsp; 7x Pro Bowl</p>
+              </div>
             </div>
-          </div>
 
-          <!-- Player 2: Randy Moss -->
-          <div class="player-row reverse">
-            <img class="player-image" src="images/RandyMoss.jpeg" alt="Randy Moss giving a thumbs up" width="400">
-            <div class="player-text">
-              <h3>Randy Moss</h3>
-              <p>Randy Moss is one of the scariest wide receivers to ever play in the NFL. He is regarded as the 2nd-best receiver of all time. He holds the record for the most receiving touchdowns in a single season by a rookie with 20, and also the most in a season with 23. He is the reason for the phrase "Get Mossed."</p>
-              <p class="player-stats">982 REC &nbsp;|&nbsp; 15,292 YDS &nbsp;|&nbsp; 156 TD</p>
-              <p class="player-accolades">1998 ROTY &nbsp;|&nbsp; 6x Pro Bowl &nbsp;|&nbsp; 4x All-Pro</p>
+            <!-- Player 2: Randy Moss (flex-md-row-reverse flips the columns on medium+ screens) -->
+            <div class="player-row row flex-md-row-reverse align-items-center g-4 mx-auto mt-4">
+              <div class="col-md-6">
+                <img class="player-image img-fluid d-block" src="images/RandyMoss.jpeg" alt="Randy Moss giving a thumbs up" width="400">
+              </div>
+              <div class="col-md-6 player-text">
+                <h3>Randy Moss</h3>
+                <p>Randy Moss is one of the scariest wide receivers to ever play in the NFL. He is regarded as the 2nd-best receiver of all time. He holds the record for the most receiving touchdowns in a single season by a rookie with 20, and also the most in a season with 23. He is the reason for the phrase "Get Mossed."</p>
+                <p class="player-stats">982 REC &nbsp;|&nbsp; 15,292 YDS &nbsp;|&nbsp; 156 TD</p>
+                <p class="player-accolades">1998 ROTY &nbsp;|&nbsp; 6x Pro Bowl &nbsp;|&nbsp; 4x All-Pro</p>
+              </div>
             </div>
-          </div>
 
-          <!-- Player 3: Dallas Turner -->
-          <div class="player-row">
-            <img class="player-image" src="images/DT-pic.jpeg" alt="Dallas Turner after sack" width="400">
-            <div class="player-text">
-              <h3>Dallas Turner</h3>
-              <p>He is the future face of the franchise that I have faith in. There isn't much to say about him yet, but he is going into his 3rd year, and I believe that Dallas Turner will be one of the best pass rushers to ever wear the purple and yellow.</p>
-              <p class="player-stats">14 SCK &nbsp;|&nbsp; 5 FF &nbsp;|&nbsp; 88 TKL &nbsp;|&nbsp; 1 INT</p>
+            <!-- Player 3: Dallas Turner -->
+            <div class="player-row row align-items-center g-4 mx-auto mt-4">
+              <div class="col-md-6">
+                <img class="player-image img-fluid d-block" src="images/DT-pic.jpeg" alt="Dallas Turner after sack" width="400">
+              </div>
+              <div class="col-md-6 player-text">
+                <h3>Dallas Turner</h3>
+                <p>He is the future face of the franchise that I have faith in. There isn't much to say about him yet, but he is going into his 3rd year, and I believe that Dallas Turner will be one of the best pass rushers to ever wear the purple and yellow.</p>
+                <p class="player-stats">14 SCK &nbsp;|&nbsp; 5 FF &nbsp;|&nbsp; 88 TKL &nbsp;|&nbsp; 1 INT</p>
+              </div>
             </div>
-          </div>
 
-        </section>
+          </section>
 
-      </main>
+        </main>
 
-      <!-- FOOTER: internal link back to the home page -->
-      <footer class="page-nav">
-        <nav aria-label="Page navigation">
-          <a href="index.html">&larr; Back to my favorite jerseys and players</a>
-        </nav>
-      </footer>
+        <!-- FOOTER: internal link back to home, now a Bootstrap button -->
+        <footer class="page-nav mt-5">
+          <nav aria-label="Page navigation">
+            <a class="btn btn-outline-warning px-4 py-2" href="index.html">&larr; Back to my favorite jerseys and players</a>
+          </nav>
+        </footer>
+
+      </div>
+
+      <!-- Decorative right stripe -->
+      <div class="col-auto d-flex">
+        <div class="stripe" aria-hidden="true"></div>
+      </div>
 
     </div>
-
-    <!-- Decorative gold/white braided stripe, mirrors the left one (hidden from screen readers) -->
-    <div class="stripe right" aria-hidden="true"></div>
   </div>
 </body>
 </html>
