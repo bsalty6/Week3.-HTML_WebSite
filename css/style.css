@@ -1,17 +1,13 @@
-
 /* ===== Base page setup ===== */
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
+/* Bootstrap's reboot handles html/body margin; min-vh-100 in the HTML handles height */
 body {
   background-color: #301462;
   font-family: Arial, sans-serif;
   text-align: center;
 }
 
-/* ===== Header row: left stripe / heading / right stripe ===== */
+/* ===== Header row: REFACTORED OUT =====
+   .header-row flexbox is replaced by Bootstrap's container-fluid + row + col
 .header-row {
   display: flex;
   align-items: stretch;
@@ -22,6 +18,7 @@ body {
   box-sizing: border-box;
   padding: 0 40px;
 }
+*/
 
 .stripe {
   width: 100px;
@@ -33,13 +30,13 @@ body {
 }
 
 .heading-text {
-  flex: 1;
   max-width: 1000px;
+  /* REFACTORED OUT: flex: 1 (Bootstrap's .col does this) */
   padding-top: 60px;
   padding-bottom: 80px;
 }
 
-/* ===== Headings ===== */
+/* ===== Headings (custom fonts and colors) ===== */
 h1 {
   font-family: 'Anton', Arial, sans-serif;
   color: #C6A960;
@@ -55,7 +52,7 @@ h2 {
   margin: 8px 0 0;
 }
 
-/* ===== Page 2 only: small uppercase label + visually-hidden heading ===== */
+/* ===== Page 2 only: small uppercase label ===== */
 .page-title-small {
   font-family: 'Oswald', Arial, sans-serif;
   color: #C6A960;
@@ -65,6 +62,7 @@ h2 {
   margin: 0 0 10px;
 }
 
+/* REFACTORED OUT: .visually-hidden (Bootstrap already provides this class)
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -76,6 +74,7 @@ h2 {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
 }
+*/
 
 /* ===== Page 2 only: favorite moments ranked list ===== */
 .rankings {
@@ -91,21 +90,21 @@ h2 {
 }
 
 .rankings ol {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
   list-style-position: inside;
   padding: 0;
   margin: 0;
+  /* REFACTORED OUT: display:flex, justify-content, flex-wrap, gap
+     (now Bootstrap's d-flex, justify-content-center, flex-wrap, gap-* in the HTML) */
 }
 
 .rankings ol li {
   max-width: 220px;
 }
 
-/* ===== ID example: favorite moments section (page 2) — thin gold divider above the section ===== */
-#favorite-moments {
+/* ===== ID dividers (custom gold line above each section) ===== */
+#favorite-moments,
+#jersey-picks,
+#player-profiles {
   border-top: 2px solid rgba(198, 169, 96, 0.35);
   padding-top: 24px;
 }
@@ -121,6 +120,15 @@ h2 {
   margin: 0 0 20px;
 }
 
+.jersey-list img {
+  width: 150px;
+  height: auto;
+  border: 2px solid #C6A960;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+}
+
+/* REFACTORED OUT: .jersey-list flexbox (now Bootstrap row / col-auto)
 .jersey-list {
   list-style: none;
   display: flex;
@@ -131,48 +139,30 @@ h2 {
   margin: 0;
   padding: 0;
 }
-
-.jersey-list img {
-  width: 150px;
-  height: auto;
-  border: 2px solid #C6A960;
-  border-radius: 6px;
-  background-color: #FFFFFF;
-}
-
-/* ===== ID example: jersey section — thin gold divider above the section ===== */
-#jersey-picks {
-  border-top: 2px solid rgba(198, 169, 96, 0.35);
-  padding-top: 24px;
-}
+*/
 
 /* ===== Player profile rows ===== */
 .player-row {
-  display: flex;
-  align-items: center;
-  gap: 40px;
   max-width: 900px;
-  margin: 60px auto 0;
   text-align: left;
+  /* REFACTORED OUT: display:flex, align-items, gap, margin
+     (now Bootstrap's row, align-items-center, g-4, mx-auto, mt-4) */
 }
 
+/* REFACTORED OUT: reversed rows now use Bootstrap's flex-md-row-reverse
 .player-row.reverse {
   flex-direction: row-reverse;
 }
+*/
 
 .player-image {
-  flex: 1 1 0;
-  min-width: 0;
-  width: 100%;
-  height: auto;
-  display: block;
   border: 2px solid #C6A960;
   border-radius: 6px;
+  /* REFACTORED OUT: flex / min-width / width / display
+     (now Bootstrap's col-md-6, img-fluid, d-block) */
 }
 
 .player-text {
-  flex: 1 1 0;
-  min-width: 0;
   color: #FFFFFF;
   font-family: 'Oswald', Arial, sans-serif;
   font-size: 1rem;
@@ -204,108 +194,37 @@ h2 {
   opacity: 0.9;
 }
 
-/* ===== ID example: player section — thin gold divider above the section ===== */
-#player-profiles {
-  border-top: 2px solid rgba(198, 169, 96, 0.35);
-  padding-top: 24px;
-}
-
-/* ===== Page navigation footer ===== */
+/* ===== Page navigation: Bootstrap .btn with custom gold colors ===== */
 .page-nav {
   margin-top: 70px;
   text-align: center;
 }
 
-.page-nav a {
-  display: inline-block;
+.page-nav .btn {
   color: #C6A960;
-  font-family: 'Oswald', Arial, sans-serif;
-  text-decoration: none;
   border: 2px solid #C6A960;
-  padding: 10px 28px;
-  border-radius: 4px;
+  font-family: 'Oswald', Arial, sans-serif;
   letter-spacing: 1px;
   transition: background-color 0.2s, color 0.2s;
 }
 
-.page-nav a:hover {
+.page-nav .btn:hover,
+.page-nav .btn:focus-visible {
   background-color: #C6A960;
   color: #301462;
+  border-color: #C6A960;
 }
 
 /* Keyboard focus style (for people navigating with Tab) */
-.page-nav a:focus-visible {
-  background-color: #C6A960;
-  color: #301462;
+.page-nav .btn:focus-visible {
   outline: 3px solid #FFFFFF;
   outline-offset: 3px;
 }
 
-/* ===== Responsive: tablets and phones (768px and below) ===== */
+/* ===== Responsive: tablets and phones (768px and below) =====
+   Duplicate 768px blocks merged into one. Stacking of player rows and the rankings
+   list is now handled by Bootstrap (col-md-6, flex-column), so those rules are gone. */
 @media (max-width: 768px) {
-  /* Tighter page padding and thinner decorative stripes */
-  .header-row {
-    gap: 12px;
-    padding: 0 10px;
-  }
-
-  .stripe {
-    width: 30px;
-    background-size: 30px auto;
-  }
-
-  .heading-text {
-    padding-top: 30px;
-    padding-bottom: 40px;
-  }
-
-  /* Smaller headings so they fit on narrow screens */
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.15rem;
-  }
-
-  /* Stack the side-by-side layouts into one column */
-  .player-row,
-  .player-row.reverse {
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 40px;
-  }
-
-  .player-image,
-  .player-text {
-    flex: none;
-    width: 100%;
-  }
-
-  .rankings ol {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .jersey-list img {
-    width: 110px;
-  }
-
-  /* Keep the footer link from overflowing */
-  .page-nav a {
-    padding: 10px 16px;
-    font-size: 0.95rem;
-  }
-}
-
-/* ===== Responsive: tablets and phones (768px and narrower) ===== */
-@media (max-width: 768px) {
-  .header-row {
-    gap: 12px;
-    padding: 0 12px;
-  }
-
   .stripe {
     width: 40px;
     background-size: 40px auto;
@@ -324,32 +243,7 @@ h2 {
     font-size: 1.15rem;
   }
 
-  /* Stack the player photo above the text, including the reversed rows */
-  .player-row,
-  .player-row.reverse {
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 40px;
-  }
-
-  .player-image {
-    flex: none;
-    max-width: 100%;
-  }
-
-  .jersey-list {
-    gap: 16px;
-  }
-
   .jersey-list img {
     width: 110px;
-  }
-
-  .rankings ol {
-    gap: 16px;
-  }
-
-  .page-nav a {
-    padding: 10px 16px;
   }
 }
